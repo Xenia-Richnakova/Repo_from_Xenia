@@ -1,12 +1,21 @@
+
 const Crypto = require("crypto");
 const fs = require("fs");
 
 // import default constants
-const MaleNames = require("./maleNames.json");
+/* const MaleNames = require("./maleNames.json");
 const FemaleNames = require("./femaleNames.json");
 const MaleSurnames = require("./maleSurnames.json");
 const FemaleSurnames = require("./femaleSurnames.json");
-const Workload = require("./workload.json");
+const Workload = require("./workload.json"); */
+
+
+const randWorkloads = [10, 20, 30, 40];
+  const male_name1 = ["Juraj","Jurij","Georgios","Jiřík","Jerzy","Georg","Georgij","Jorge","Jirka","Jegor","Georgius","Jiříček","Gyorgy","Jorgen","Jirouš","Domingo","Domokos","Radim","Radomír","Radoslav","Ctirad","Radko","Radoš","Wenzel","Venda","Viačeslav","Vašek","Véna","Venca","Vencel"];
+  const male_name2 = ["Tůma","Šťastný","Staněk","Jaroš","Dostál","Štěpánek","Polák","Ševčík","Slavík","Sedlák","Růžička","Matoušek","Kubíček","Procházka"];
+  const female_name1 = ["Terezie","Zina","Terezia","Tea","Terezka","Terezička","Terka","Terča","Rézinka","Rézka", "Věra","Viktorie","Hedvika","Berenika","Verona","Nika","Věrka","Vera","Lenka","Helena","Magdalena","Magdaléna","Alenka","Ali","Lucia","Luca","Jasna","Jasněna","Luciána","Lucina","Lucka","Lucík","Lucinka"];
+  const female_name2 = ["Žáková","Vávrová","Vaňková","Tichá","Veselá","Lišková","Kovářová","Bártová","Zemanová","Valentová","Němečková","Moravcová","Bednářová","Macháčková","Urbanová","Žáková","Vaňková","Vávrová"];
+
 
 // define dtoIn
 const dtoIn = {
@@ -81,3 +90,5 @@ function main(input) {
 
 const result = main(dtoIn);
 fs.writeFile("./result.json", JSON.stringify(result, null, 2));
+
+
